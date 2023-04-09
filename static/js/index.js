@@ -1,7 +1,7 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "./static/interpolation/fyp_pic";
-var NUM_INTERP_FRAMES = 179;
+var NUM_INTERP_FRAMES = 177;
 
 var interp_images = [];
 function preloadInterpolationImages() {
