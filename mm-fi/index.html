@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="MM-Fi: Multi-Modal Non-Intrusive 4D Human Dataset">
+  <meta name="keywords" content="Human pose estimation, WiFi CSI, Lidar, mmwave, RGB, metaverse">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MM-Fi: Multi-Modal Non-Intrusive 4D Human Dataset</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://github.com/NTU-AIoT-Lab">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/xyanchen/WiFi-CSI-Sensing-Benchmark">
+            SenseFi
+          </a>
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/NTU-AIoT-Lab/EfficientFi">
+            EfficientFi
+          </a>
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="<!-- github link for metafi-->">
+            MetaFi
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MM-Fi: Multi-Modal Non-Intrusive 4D Human Dataset</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://marsyang.site/">Jianfei Yang</a>,</span>
+            <span class="author-block">
+              <a>He Huang</a>,</span>
+            <span class="author-block">
+              <a>Yunjiao Zhou</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=XGQNPHAAAAAJ&hl=en&inst=10972715779114120479&oi=sra">Xinyan Chen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://xuyu0010.github.io">Yuecong Xu</a>,
+            </span> <br>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=XcV_sesAAAAJ&hl=en">Shenghai Yuan</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://hanzou.tech/">Han Zou</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://personal.ntu.edu.sg/elhxie/">Lihua Xie</a>
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">School of Electrical and Electronic Engineering, Nanyang Technological University,</span>
+            <span class="author-block">School of Informatics, University of Edinburgh</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=1uAsASS1th"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2305.10345"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=T6TnKgGARgc"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/ybhbingo/MMFi_dataset"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+            
+          <br />
+          <br />
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b>Accepted by NeurIPS 2023 Datasets and Benchmarks Track</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demo video link-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/MMFi_data_demo.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Visualization of the Data of each modality and their corresponding estimations.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/steve.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/chair-tp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/shiba.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/fullbody.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/blueshirt.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/mask.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-coffee">
+          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/coffee.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-toby">
+          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/toby2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            4D human perception plays an essential role in a myriad of applications, such as
+            home automation, healthcare, and metaverse avatar simulation. Existing solutions,
+            mainly relying on cameras and wearable devices, are either privacy-concerned or
+            inconvenient to use. To address these issues, wireless sensing emerges, which
+            leverages LiDAR, mmWave radar, and even WiFi signals for device-free human
+            sensing. 
+          </p>
+          <p>
+            In this paper, we propose the first multi-modal non-intrusive 4D human 
+            dataset, <span class="dnerf">MM-Fi</span>, with 25 daily or rehabilitation action categories to bridge the
+            gap between wireless sensors and high-level human perception tasks. Our dataset
+            consists of over 320k synchronized frames of five modalities from 40 human
+            subjects. Various annotations are provided to support potential sensing tasks, e.g.,
+            human pose estimation and action recognition. Extensive experiments have been
+            conducted to compare the sensing capacity of each or several modalities in terms of
+            multiple tasks. It is hoped that MM-Fi can contribute to wireless sensing research
+            with respect to action recognition, human pose estimation, multi-modal learning,
+            cross-modal supervision, and interdisciplinary healthcare research
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">Sensor Platform</h2>
+          <img src="./static/images/setup.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div>
+      </div>
+  </div>
+</section>
+
+  
+
+<section class="section">
+  <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">Scale and Modalities</h2>
+          <img src="./static/images/compare.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+      </div>
+      </div>
+  </div>
+</section>
+  
+  
+  
+<section class="section">
+<div class="container is-max-desktop">
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+    <div class="column is-full-width">
+        <h2 class="title is-3">Huamn Pose Estimation Result</h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Visualization of the human pose estimation result</h3>
+        <div class="content has-text-justified">
+        <p>
+            We provide the human pose estimation result of each modality in the frame level.
+        </p>
+        </div>
+        <div class="columns is-vcentered interpolation-panel">
+        <div class="column interpolation-video-column">
+            <div id="interpolation-image-wrapper">
+            Loading...
+            </div>
+            <input class="slider is-fullwidth is-large is-info"
+                id="interpolation-slider"
+                step="1" min="0" max="100" value="0" type="range">
+        </div>
+        </div>
+        <br/>
+        <!--/ Interpolating. -->
+
+
+    </div>
+    </div>
+    <!--/ Animation. -->
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    
+    <div class="columns is-centered has-text-centered">
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/T6TnKgGARgc?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+  </div>
+</section>
+-->
+<!--要改watch?v= 成 embed/；原链接里&后的部分删掉变成?rel=0&amp;showinfo=0-->
+  
+<section class="section">
+<div class="container is-max-desktop">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            If you would like to utilize RGB images, please fill the <a href="https://docs.google.com/forms/d/e/1FAIpQLSf_-qwJSsxY05yTfxFlqMZNCRLNozxL9EC_kMLGWuxNliU_TQ/viewform">MM-Fi Dataset Request Form.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+      
+
+<section class="section">
+  <div class="container is-max-desktop">
+  
+      <div class="columns is-centered">
+      <div class="column is-full-width">
+          <h2 class="title is-3">License</h2>
+          <div class="content has-text-justified">
+            <p>
+              MM-Fi is released under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+            </p>
+      </div>
+      </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
+    <pre><code>@inproceedings{
+      yang2023mm,
+      title={MM-Fi: Multi-Modal Non-Intrusive 4D Human Dataset for Versatile Wireless Sensing},
+      author={Yang, Jianfei and Huang, He and Zhou, Yunjiao and Chen, Xinyan and Xu, Yuecong 
+              and Yuan, Shenghai and Zou, Han and Lu, Chris Xiaoxuan and Xie, Lihua},
+      booktitle={Thirty-seventh Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
+      year={2023},
+      url={https://openreview.net/forum?id=1uAsASS1th}
+  }</code></pre>
+    <pre><code><!--enter bitex here-->@article{
+      yang2023mmfi,
+      title={MM-Fi: Multi-Modal Non-Intrusive 4D Human Dataset for Versatile Wireless Sensing}, 
+      author={Yang, Jianfei and Huang, He and Zhou, Yunjiao and Chen, Xinyan and Xu, Yuecong 
+              and Yuan, Shenghai and Zou, Han and Lu, Chris, Xiaoxuan and Xie, Lihua},
+      journal={arXiv preprint arXiv:2305.10345}
+      year={2023}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href=""><!--paper here-->
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/NTU-AIoT-Lab" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. And it is borrowed from the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
