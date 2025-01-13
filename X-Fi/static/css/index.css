@@ -50,6 +50,16 @@ body {
 
 .publication-title {
     font-family: 'Google Sans', sans-serif;
+    background: linear-gradient(to right, #F2DC5D, #A8C97A, #4BA56A, #3B847B, #4477A4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.method-text {
+    font-family: 'Google Sans', sans-serif;
+    background: linear-gradient(to right, #F2DC5D, #A8C97A, #4BA56A, #3B847B, #4477A4);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .publication-authors {
