@@ -1,4 +1,5 @@
 # Xinyan's Homepage
+[ICLR2025] [X-Fi: A Modality-Invariant Foundation Model for Multimodal Human Sensing](https://xyanchen.github.io/X-Fi/)
 My Final Year Project Homepage is here: [Deep Multi-modal Learning for Radar-Vision human sensing](https://xyanchen.github.io/FYP).
 
 # Website License
